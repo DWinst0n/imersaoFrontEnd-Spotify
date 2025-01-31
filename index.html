@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imersão Alura</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4449d24658.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <aside>
-        <section class="menu__navegacao">
-            <div class="logo"><img src="assets/icons/logo-spotify.png" alt="Logo do Spotify"></div>
+        <section class="menu__sidebar">
+            <a class="logo" href="#"><img src="assets/icons/logo-spotify.png" alt="Logo do Spotify"></a>
             <ul class="menu__opcoes">
                 <li class= "menu__opcao">
-                    <a href="#"><span></span><p>Início</p></a>
+                     <a href="#"><span class="fa fa-home"></span><span>Início</span></a>
                 </li>
                 <li class= "menu__opcao">
-                    <a href="#"><span></span><p>Buscar</p></a>
+                    <a href="#"><span class="fa fa-search"></span><p>Buscar</p></a>
                 </li>
             </ul>
         </section>
@@ -37,10 +38,20 @@
         </section>
     </aside>
 
-    <main>
+    <main class="container__principal">
         <header>
-            <nav></nav>
-            <div class="cabecalho__conta"></div>
+            <div class="navegacao">
+                <nav>
+                    <button class="arrow-left"><img src="assets/icons/small-left.png"></button>
+                    <button class="arrow-right"><img src="assets/icons/small-right.png"></button>
+                </nav>
+                    <input type="search" class="navegacao__busca" id="buscarMusica" placeholder="O que você quer ouvir?">
+                </label>
+            </div>
+            <div class="cabecalho__conta">
+                <a href="#" class="criar__conta">Inscreva-se</a>
+                <a href="#" class="entrar__conta">Entrar</a>
+            </div>
         </header>
 
         <section class="playlist__container">
@@ -53,6 +64,13 @@
             </ul>
         </section>
     </main>
-    <footer></footer>
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <h3 class="rodape__titulo">Testar o Premium de graça</h3>
+            <p class="rodape__texto">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</p>
+        </div>
+        <button class="rodape__botao">Inscreva-se grátis</button>
+    </footer>
+    <script type="module" src="app/script.js"></script>
 </body>
 </html>
