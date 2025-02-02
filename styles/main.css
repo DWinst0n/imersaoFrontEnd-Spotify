@@ -21,7 +21,7 @@
   .secoes__generos__musicas {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 3rem;
+    gap: calc(3.5rem - 1vw);
   
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -32,8 +32,8 @@
     position: relative;
     padding: 1rem;
   
-    width: 13.125rem;
-    height: 16.25rem;
+    height: calc(9.5rem + 5vw);
+    width: calc(8rem + 4.2vw);
   
     overflow: hidden;
   

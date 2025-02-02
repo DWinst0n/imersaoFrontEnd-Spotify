@@ -23,7 +23,8 @@
   }
   
   .navegacao__busca{
-    padding: 1rem 6.25rem 1rem 3rem;
+    padding: 1rem 10vw 1rem 3rem;
+
     box-sizing: content-box;
     text-overflow: ellipsis;
     overflow: hidden;

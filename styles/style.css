@@ -7,6 +7,9 @@
 
 *{
   transition: 0.25s ease-in-out;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-destaque) transparent;
 }
 body {
   background-color: var(--cor-fundo);
@@ -64,6 +67,16 @@ button {
   .cabecalho__conta {
     align-self: flex-end;
   }
+  .botao__linguas {
+    width: auto;
+    border-radius: 0.5rem;
+  }
+ }
+ @media screen and (max-width: 930px) {
+  .biblioteca__acesso, .biblioteca__botao {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
  }
  @media screen and (max-width: 640px) {
   .desktop {
@@ -79,6 +92,9 @@ button {
   aside, .container__principal {
     max-width: 90%;
     align-self: center;
+  }
+  .botao__linguas {
+    max-width: max-content;
   }
   .sidebar__conteudo {
     display: flex;
@@ -104,9 +120,5 @@ button {
   }
   .secoes__generos__musicas {
     gap: 0.175rem;
-  }
-  .secoes__generos__musicas .cards {
-    width: 35%;
-    height: 45%;
   }
  }
