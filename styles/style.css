@@ -2,48 +2,65 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-    --cor-fundo: #000000;
-    --cor-containers: #121212;
-    --cor-containers-secundaria: #242424;
-    --cor-destaque: #1ED760;
-    --cor-texto: #ffffff;
-    --cor-secundaria-texto: #b3b3b3;
-    --cor-terciaria: #878787;
-    --cor-texto-botoes: var(--cor-fundo);
-    --fonte-principal: 'DM Sans', sans-serif;
-  }
-  *{
-    transition: 0.5s ease-in-out;
-  }
+  --cor-fundo: #000000;
+  --cor-containers: linear-gradient(180deg, #252424, #121212);
+  --cor-containers-secundaria: #646464;
+  --cor-destaque: #1ED760;
+  --cor-texto: #ffffff;
+  --cor-secundaria-texto: #b3b3b3;
+  --cor-terciaria: #878787;
+  --cor-texto-botoes: var(--cor-fundo);
+  --fonte-principal: 'DM Sans', sans-serif;
+
+    /* Colors Cards */
+  --card1: rgb(0, 100, 80);
+  --card2: rgb(132, 0, 231);
+  --card3: rgb(30, 50, 100);
+  --card4: rgb(140, 25, 50);
+  --card5: rgb(232, 17, 91);
+  --card6: rgb(83, 122, 161);
+  --card7: rgb(142, 102, 172);
+  --card8: rgb(20, 138, 8);
+  --card9: rgb(30, 50, 100);
+  --card10: rgb(233, 20, 41);
+  --card11: rgb(80, 55, 80);
+  --card12: rgb(216, 64, 0);
+  --card13: rgb(186, 93, 7);
+  --card14: rgb(0, 30, 80);
+  --card15: rgb(60, 30, 80);
+}
+*{
+  transition: color 0.5s ease-in-out;
+}
 body {
-    background-color: var(--cor-fundo);
+  background-color: var(--cor-fundo);
 
-    color: var(--cor-texto);
-    font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
 
-    max-width: 100vw;
-    max-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
 
 
-    display: flex;
+  display: flex;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
+
+  overflow-x: hidden;
 }
 .container__principal {
   display: flex;
   flex-direction: column;
 
-  width: 72.5%;
+  max-width: 72.5%;
 }
 .container__principal header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  flex-wrap: wrap;
 }
 section, header {
-    background-color: var(--cor-containers);
+    background: var(--cor-containers);
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -159,7 +176,6 @@ transform: scale(1.3);
 
 .navegacao {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
   width: 30%;
@@ -185,6 +201,9 @@ transform: scale(1.3);
 .navegacao__busca{
   padding: 1rem 6.25rem 1rem 3rem;
   box-sizing: content-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 
   background-color: var(--cor-containers-secundaria);
   border: none;
@@ -199,6 +218,7 @@ transform: scale(1.3);
   outline: 2px solid var(--cor-destaque);
 }
 .navegacao__busca::placeholder {
+  color: var(--cor-secundaria-texto);
   font-family: var(--fonte-principal);
 }
 
@@ -210,6 +230,8 @@ transform: scale(1.3);
 }
 .criar__conta {
   color: var(--cor-secundaria-texto);
+  font-size: 1rem;
+  font-weight: 700;
 }
 .entrar__conta {
   color: var(--cor-fundo);
@@ -224,9 +246,106 @@ transform: scale(1.3);
   font-family: var(--fonte-principal);
 }
 
+.generos__musicas__container {
+  display: flex;
+  flex-direction: column;
 
+  height: calc(100% - 16.125rem);
+}
+.generos__musicas__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5%;
+}
+.generos__musicas__texto h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.generos__musicas__texto h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.secoes__generos__musicas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
 
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-destaque) transparent;
+}
 
+.secoes__generos__musicas .cards {
+  position: relative;
+  padding: 1rem;
+
+  width: 13.125rem;
+  height: 16.25rem;
+
+  overflow: hidden;
+
+  border-radius: 0.5rem;
+}
+.secoes__generos__musicas span {
+  color: var(--cor-texto);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.secoes__generos__musicas img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 6.6875rem;
+  transform: rotate(25deg) translate(18%, -2%);
+}
+
+.card1 {
+  background-color: var(--card1);
+}
+.card2 {
+  background-color: var(--card2);
+}
+.card3 {
+  background-color: var(--card3);
+}
+.card4 {
+  background-color: var(--card4);
+}
+.card5 {
+  background-color: var(--card5);
+}
+.card6 {
+  background-color: var(--card6);
+}
+.card7 {
+  background-color: var(--card7);
+}
+.card8 {
+  background-color: var(--card8);
+}
+.card9 {
+  background-color: var(--card9);
+}
+.card10 {
+  background-color: var(--card10);
+}
+.card11 {
+  background-color: var(--card11);
+}
+.card12 {
+  background-color: var(--card12);
+}
+.card13 {
+  background-color: var(--card13);
+}
+.card14 {
+  background-color: var(--card14);
+}
+.card15 {
+  background-color: var(--card15);
+}
 
 .rodape{
   display: flex;
@@ -264,4 +383,63 @@ transform: scale(1.3);
      border: none;
      border-radius: 3rem;
      cursor: pointer;
+ }
+ .mobile {
+  display: none;
+}
+ @media screen and (max-width: 930px) {
+  .container__principal header {
+    align-items: flex-start;
+
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cabecalho__conta {
+    align-self: flex-end;
+  }
+ }
+ @media screen and (max-width: 640px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  body {
+    flex-direction: column;
+    max-height: auto;
+  }
+  aside, .container__principal {
+    max-width: 90%;
+    align-self: center;
+  }
+  .sidebar__conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  .cabecalho__conta {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+    align-self: auto;
+  }
+  .generos__musicas__container {
+    padding-bottom: 6.5rem;
+  }
+  .navegacao {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    align-self: center;
+  }
+  .secoes__generos__musicas {
+    gap: 0.175rem;
+  }
+  .secoes__generos__musicas .cards {
+    width: 35%;
+    height: 45%;
+  }
  }
