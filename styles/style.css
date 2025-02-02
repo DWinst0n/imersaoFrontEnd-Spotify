@@ -57,6 +57,7 @@ button {
  .mobile {
   display: none;
 }
+
  @media screen and (max-width: 930px) {
   .container__principal header {
     align-items: flex-start;
@@ -89,6 +90,9 @@ button {
     flex-direction: column;
     max-height: auto;
   }
+  .biblioteca__acesso, .biblioteca__botao {
+    flex-direction: row;
+  }
   aside, .container__principal {
     max-width: 90%;
     align-self: center;
@@ -120,5 +124,23 @@ button {
   }
   .secoes__generos__musicas {
     gap: 0.175rem;
+  }
+ }
+ @media screen and (max-width: 405px) {
+  .rodape {
+    position: static;
+    flex-direction: column;
+  }
+ }
+ @media screen and (max-height:595px) {
+  body {
+    max-height: max-content;
+
+    overflow-y: scroll;
+  }
+ }
+ @media screen and (max-height:325px) {
+  .rodape {
+    display: none;
   }
  }
