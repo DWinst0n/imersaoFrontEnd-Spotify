@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root {
+    --cor-fundo: #000000;
+    --cor-containers: linear-gradient(180deg, #252424, #121212);
+    --cor-containers-secundaria: #646464;
+    --cor-destaque: #1ED760;
+    --cor-texto: #ffffff;
+    --cor-secundaria-texto: #b3b3b3;
+    --cor-terciaria: #878787;
+    --cor-texto-botoes: var(--cor-fundo);
+    --fonte-principal: 'DM Sans', sans-serif;
+  
+      /* Colors Cards */
+    --card1: rgb(0, 100, 80);
+    --card2: rgb(132, 0, 231);
+    --card3: rgb(30, 50, 100);
+    --card4: rgb(140, 25, 50);
+    --card5: rgb(232, 17, 91);
+    --card6: rgb(83, 122, 161);
+    --card7: rgb(142, 102, 172);
+    --card8: rgb(20, 138, 8);
+    --card9: rgb(30, 50, 100);
+    --card10: rgb(233, 20, 41);
+    --card11: rgb(80, 55, 80);
+    --card12: rgb(216, 64, 0);
+    --card13: rgb(186, 93, 7);
+    --card14: rgb(0, 30, 80);
+    --card15: rgb(60, 30, 80);
+  }
+  .card1 {
+    background-color: var(--card1);
+  }
+  .card2 {
+    background-color: var(--card2);
+  }
+  .card3 {
+    background-color: var(--card3);
+  }
+  .card4 {
+    background-color: var(--card4);
+  }
+  .card5 {
+    background-color: var(--card5);
+  }
+  .card6 {
+    background-color: var(--card6);
+  }
+  .card7 {
+    background-color: var(--card7);
+  }
+  .card8 {
+    background-color: var(--card8);
+  }
+  .card9 {
+    background-color: var(--card9);
+  }
+  .card10 {
+    background-color: var(--card10);
+  }
+  .card11 {
+    background-color: var(--card11);
+  }
+  .card12 {
+    background-color: var(--card12);
+  }
+  .card13 {
+    background-color: var(--card13);
+  }
+  .card14 {
+    background-color: var(--card14);
+  }
+  .card15 {
+    background-color: var(--card15);
+  }
+  

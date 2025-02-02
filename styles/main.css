@@ -1,0 +1,54 @@
+.generos__musicas__container {
+    display: flex;
+    flex-direction: column;
+  
+    height: calc(100% - 16.125rem);
+  }
+  .generos__musicas__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5%;
+  }
+  .generos__musicas__texto h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .generos__musicas__texto h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .secoes__generos__musicas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+  
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-destaque) transparent;
+  }
+  
+  .secoes__generos__musicas .cards {
+    position: relative;
+    padding: 1rem;
+  
+    width: 13.125rem;
+    height: 16.25rem;
+  
+    overflow: hidden;
+  
+    border-radius: 0.5rem;
+  }
+  .secoes__generos__musicas span {
+    color: var(--cor-texto);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .secoes__generos__musicas img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 6.6875rem;
+    transform: rotate(25deg) translate(18%, -2%);
+  }

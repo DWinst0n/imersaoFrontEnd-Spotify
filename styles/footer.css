@@ -1,0 +1,37 @@
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      position: fixed;
+      bottom: 0;
+      padding: 1rem 0;
+      width: 100%;
+  
+      background: linear-gradient(135deg, var(--cor-destaque), var(--cor-fundo), var(--cor-destaque));
+      background-size: 500% 500%;
+      animation: animacaoBackground 60s infinite ease-in-out;
+    }
+    @keyframes animacaoBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .rodape div, .rodape button {
+      margin: 0 calc(1rem + 2.5%);
+   } 
+   .rodape__botao {
+       background-color: var(--cor-texto);
+       color: var(--cor-fundo);
+       font-size: 1rem;
+       font-weight: bold;
+       padding: 1rem 2rem;
+       border: none;
+       border-radius: 3rem;
+       cursor: pointer;
+   }
