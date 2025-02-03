@@ -1,8 +1,12 @@
-.generos__musicas__container {
+.generos__musicas__container {  
+    height: calc(100% - 16.125rem);
+    overflow: hidden;
+
+  }
+  .playlists__results {
     display: flex;
     flex-direction: column;
-  
-    height: calc(100% - 16.125rem);
+    height: 100%;
   }
   .generos__musicas__texto {
     display: flex;

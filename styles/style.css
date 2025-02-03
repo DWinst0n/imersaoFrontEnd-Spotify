@@ -27,9 +27,13 @@ body {
 
   overflow-x: hidden;
 }
+.hidden {
+  display: none;
+}
 .container__principal {
   display: flex;
   flex-direction: column;
+  width: 75vw;
 }
 .container__principal header {
   display: flex;
