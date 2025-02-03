@@ -52,3 +52,18 @@
     width: 6.6875rem;
     transform: rotate(25deg) translate(18%, -2%);
   }
+  @media screen and (max-width: 1960px) {
+    .secoes__generos__musicas {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width: 1485px) {
+    .secoes__generos__musicas {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 1060px) {
+    .secoes__generos__musicas {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
