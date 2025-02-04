@@ -1,19 +1,20 @@
 const resultArtist = document.getElementById("resultArtist");
 const resultPlaylist = document.getElementById("playlistsResults");
 const gridContainer = document.querySelector(".grid-container");
+const searchInput = document.getElementById("searchInput");
 
 function requestApi(searchTerm) {
-  const url = `http://localhost:3000/artists?name_like=${searchTerm}`;
+  const url = "https://dwinst0n.github.io/imersaoFrontEnd-Spotify/api-artists/artists.json";
   fetch(url)
     .then((response) => response.json())
-    .then((result) => displayResults(result, searchTerm));
+    .then((result) => displayResults(result.artists || [], searchTerm));
 }
 
-function displayResults(result, searchTerm) {
+function displayResults(artists, searchTerm) {
   resultPlaylist.classList.add("hidden");
   gridContainer.innerHTML = "";
 
-  const filteredArtists = result.filter((artist) =>
+  const filteredArtists = artists.filter((artist) =>
     artist.name.toLowerCase().includes(searchTerm)
   );
 
@@ -23,7 +24,6 @@ function displayResults(result, searchTerm) {
     filteredArtists.forEach((artist) => {
       const artistCard = document.createElement("div");
       artistCard.classList.add("artist-card");
-
       artistCard.innerHTML = `
         <div class="card-img">
             <img class="artist-img" src="${artist.urlImg}" alt="Imagem de ${artist.name}" />
@@ -31,23 +31,20 @@ function displayResults(result, searchTerm) {
                 <span class="fa fa-solid fa-play"></span>
             </div>
         </div>
-        <div class="card-text">              
+        <div class="card-text">
             <span class="artist-name">${artist.name}</span>
             <span class="artist-categorie">Artista</span>
         </div>
       `;
-
       gridContainer.appendChild(artistCard);
     });
   }
-
   resultArtist.classList.remove("hidden");
 }
 
-const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", () => {
-  const searchTerm = searchInput.value.toLowerCase();
-  if (searchTerm.trim() === "") {
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  if (searchTerm === "") {
     resultPlaylist.classList.remove("hidden");
     resultArtist.classList.add("hidden");
     return;
